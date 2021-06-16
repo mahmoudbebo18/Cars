@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- chorom inspect meta  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Rest</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="https://unpkg.com/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body dir="rtl">
+  <!-- Start Nav Bar -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <img src="imgs/logo.png" width="80px">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i style="color:#fff" class="fa fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="all-requests.html">
+              <i class="fa fa-table ml-2"></i>طلباتي
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="all-orders.html">
+              <i class="fas fa-pen"></i>
+              اوامري
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="my-garage.html">
+              <i class="fa fa-car ml-2"></i>سياراتي </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user ml-2"></i>حسابي
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="my-account.html">
+                <i class="fas fa-user"></i>بيانات الحساب
+              </a>
+              <a class="dropdown-item" href="address.html">
+                <i class="fas fa-map-marker-alt"></i>
+                العنوان
+              </a>
+              <a class="dropdown-item" href="payment.html">
+                <i class="fas fa-money-bill-alt"></i>
+                طرق الدفع
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--///nav-->
+  </header>
+
+  <!-- request-->
+  <section class="request">
+    <div class="container-fluid">
+      <div class="my-order d-flex">
+        <!-- Bread-->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="index.html"> <i class="fas fa-home"></i>الرئيسية </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">اوامر</li>
+          </ol>
+        </nav>
+
+      </div>
+
+      <!-- request table -->
+
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <th scope="col">الكود</th>
+            <th scope="col">التاريخ</th>
+            <th scope="col">مدة التوصيل </th>
+            <th scope="col">السعر</th>
+            <th scope="col">المستخدم</th>
+            <th scope="col">ملاحظات</th>
+            <th scope="col">الاجراء</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1201</td>
+            <td>2021/05/24</td>
+            <td>14</td>
+            <td>15.20</td>
+            <td>علاء</td>
+            <td>لايوجد</td>
+            <td class="d-flex">
+              <!-- show button-->
+              <button data-toggle="modal" data-target="#reqDetailCenter" class="btn btn-sm btn-blue ml-2">
+                <i data-toggle="tooltip" data-placement="top" title="التفاصيل" class="tool  fas fa-eye"></i>
+              </button>
+
+            </td>
+          </tr>
+          <tr>
+            <td>1201</td>
+            <td>2021/05/24</td>
+            <td>14</td>
+            <td>15.20</td>
+            <td>علاء</td>
+            <td>لايوجد</td>
+            <td class="d-flex">
+              <!-- show button-->
+              <button data-toggle="modal" data-target="#reqDetailCenter" class="btn btn-sm btn-blue ml-2">
+                <i data-toggle="tooltip" data-placement="top" title="التفاصيل" class="tool  fas fa-eye"></i>
+              </button>
+
+            </td>
+          <tr>
+            <td>1201</td>
+            <td>2021/05/24</td>
+            <td>14</td>
+            <td>15.20</td>
+            <td>علاء</td>
+            <td>لايوجد</td>
+            <td class="d-flex">
+              <!-- show button-->
+              <button data-toggle="modal" data-target="#reqDetailCenter" class="btn btn-sm btn-blue ml-2">
+                <i data-toggle="tooltip" data-placement="top" title="التفاصيل" class="tool  fas fa-eye"></i>
+              </button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!--////request -->
+
+
+  <!-- my request details modal -->
+
+  <div class="modal fade offer-details-modal" id="reqDetailCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">
+            بيانات الامر
+          </h5>
+          <!-- Modal close button-->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Modal body-->
+        <div class="modal-body">
+
+          <div class="offer-details">
+            <!-- order-name-->
+            <div class="peace-name ">
+              <div class="req-details d-flex justify-content-between">
+                <h6>عرض رقم
+                  <span id="offer-id ">19752140</span>
+                </h6>
+                <span>13/6/2021</span>
+              </div>
+              <ul>
+                <li class="alert alert-info">
+                  <div class="car-info d-flex">
+                    <h6>
+                      <i class="fas fa-car"></i>
+                      بيانات السيارة
+                    </h6>
+
+                    <p> (هيونداي / 2012 / اصلي ) </p>
+
+                  </div>
+                </li>
+                <li class="alert alert-info">
+                  <div class="car-info d-flex">
+                    <h6>
+                      <i class="fas fa-thumbtack"></i>
+                      العنوان
+                    </h6>
+
+                    <p>5,شارع زكريا </p>
+
+                  </div>
+
+                </li>
+
+                <li class="alert alert-info">
+                  <div class="car-info d-flex">
+                    <h6>
+                      <i class="fas fa-money-bill-alt"></i>
+                      الدفع
+                    </h6>
+
+                    <p>فيزا </p>
+
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+            <!-- order breif -->
+            <div class="breif">
+              <h5>
+                <i class="fas fa-toolbox"></i>
+                طبة زيت موتور
+              </h5>
+              <div class="offer-date d-flex justify-content-between ">
+                <p>الكود </p>
+                <span>145</span>
+
+              </div>
+              <div class="offer-date d-flex justify-content-between">
+                <p>الكمية </p>
+                <span>2.00</span>
+
+              </div>
+              <div class="offer-date d-flex justify-content-between">
+                <p>السعر </p>
+                <span>150.00</span>
+
+              </div>
+              <div class="offer-date d-flex justify-content-between">
+                <p>ملاحظات </p>
+                <span>لايوجد</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="total-price">
+            <h5>
+              <i class="fas fa-money-bill-wave"></i>
+              السعر الكلي
+            </h5>
+            <div class="offer-date d-flex justify-content-between ">
+              <p>السعر </p>
+              <span> 120</span>
+
+            </div>
+            <div class="offer-date d-flex justify-content-between">
+              <p> ض.ق.م </p>
+              <span> 50</span>
+
+            </div>
+            <div class="offer-date d-flex justify-content-between">
+              <p> الاجمالي </p>
+              <span> 170</span>
+
+            </div>
+          </div>
+          <!-- order state -->
+
+          <div class="total-price">
+            <h5>
+              <i class="fas fa-hourglass-half"></i>
+              حالة الامر
+            </h5>
+            <div id="state">
+              <ul class="nav">
+                <li>
+                  <a class="nav-link" href="#step-1">
+                    تم استلام الامر
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#step-2">
+                    جاري التنفيذ
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#step-3">
+                    تم الانتهاء
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#step-4">
+                    في طريقه اليك
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link" href="#step-4">
+                    تم التوصيل
+                  </a>
+                </li>
+              </ul>
+
+              <div class="tab-content">
+                <div id="step-1" class="tab-pane" role="tabpanel">
+                  Step content
+                </div>
+                <div id="step-2" class="tab-pane" role="tabpanel">
+                  Step content
+                </div>
+                <div id="step-3" class="tab-pane" role="tabpanel">
+                  Step content
+                </div>
+                <div id="step-4" class="tab-pane" role="tabpanel">
+                  Step content
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Modal footer with close and save buttons-->
+        <div class="modal-footer justify-content-start">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            اغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/mdb.min.js"></script>
+  <script src="https://unpkg.com/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.tool').tooltip();
+    });
+    $(document).ready(function () {
+
+      // SmartWizard initialize
+      $('#state').smartWizard();
+
+    });
+  </script>
+</body>
+
+</html>

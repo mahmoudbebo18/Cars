@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta for chrom inspect -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Rest</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link href="https://unpkg.com/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body dir="rtl">
+    <!-- Start Nav Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="imgs/logo.png" width="80px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i style="color:#fff" class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-table ml-2"></i>طلباتي
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-pen"></i>
+                            اوامري
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-car ml-2"></i>سياراتي </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user ml-2"></i>حسابي                  
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="my-account.html">
+                              <i class="fas fa-user"></i>بيانات الحساب
+                            </a>
+                            <a class="dropdown-item" href="address.html">
+                              <i class="fas fa-map-marker-alt"></i>
+                              العنوان
+                            </a>
+                            <a class="dropdown-item" href="payment.html">
+                              <i class="fas fa-money-bill-alt"></i>
+                              طرق الدفع
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                              <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                            </a>
+                          </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--///nav-->
+    </header>
+
+    <!-- compare offers -->
+
+    <section class="request my-garage compare-offers">
+        <div class="container-fluid">
+            <div class="my-order d-flex">
+                <!-- Bread-->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html"> <i class="fas fa-home"></i>الرئيسية </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">العروض </li>
+                    </ol>
+                </nav>
+
+
+            </div>
+            <div class="heading text-right justify-content-between">
+                <!-- 
+                    Add New Car modal
+                    -->
+                <div class="modal fade" id="carCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">
+                                    اضف سيارة جديدة
+                                </h5>
+                                <!-- Modal close button-->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <!-- Modal body-->
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label>الماركة</label>
+                                        <select required class="form-select form-control"
+                                            aria-label="Default select example">
+                                            <optgroup>
+                                                <option selected>هيونداي</option>
+                                                <option value="1">تيست 1</option>
+                                                <option value="2">تيست 2</option>
+                                                <option value="3">تيست 3</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>الموديل</label>
+                                        <select required class="form-select form-control"
+                                            aria-label="Default select example">
+                                            <optgroup>
+                                                <option selected>هيونداي</option>
+                                                <option value="1">تيست 1</option>
+                                                <option value="2">تيست 2</option>
+                                                <option value="3">تيست 3</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>الماركة</label>
+                                        <select required class="form-select form-control"
+                                            aria-label="Default select example">
+                                            <optgroup>
+                                                <option selected>هيونداي</option>
+                                                <option value="1">تيست 1</option>
+                                                <option value="2">تيست 2</option>
+                                                <option value="3">تيست 3</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>الشاسية</label>
+                                        <input type="text" class="form-control">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>اللوحة</label>
+                                        <input type="text" class="form-control">
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>ملاحظات</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+
+                                    </div>
+
+                                </form>
+                            </div>
+                            <!-- Modal footer with close and save buttons-->
+                            <div class="modal-footer justify-content-start">
+
+                                <button type="button" class="btn btn-primary">
+                                    حفظ
+                                </button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                    اغلاق
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--//// add new car modal -->
+            </div>
+
+            <!-- car table table -->
+
+            <div class="saved-cars">
+
+                <h6 class="text-right font-weight-bold  mb-3" style="margin-top: 20px !important;"> اجمالي العروض</h6>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">الكود</th>
+                            <th scope="col">التاريخ</th>
+                            <th scope="col">ايام الانتهاء</th>
+                            <th scope="col">تاريخ الانتهاء</th>
+                            <th scope="col">الكمية</th>
+                            <th scope="col">القيمة</th>
+                            <th scope="col">الاجراء</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1201</td>
+                            <td>2021/05/24</td>
+                            <td>14</td>
+                            <td>2021/05/25</td>
+                            <td>
+                                2.00
+                            </td>
+                            <td>184.00</td>
+                            <td class="d-flex">
+                                <button data-toggle="modal" data-target="#detailsCenter"
+                                    class="btn btn-sm btn-primary ml-2">
+                                    <i data-toggle="tooltip" data-placement="right" title="تفاصيل"
+                                        class="fas fa-eye tool"></i>
+                                </button>
+                                <button class="btn btn-sm btn-indigo ml-2">
+                                    <a class="add" href="new-order.html">
+                                        <i data-toggle="tooltip" data-placement="left" title="اضافة امر"
+                                            class="tool fas fa-shopping-cart"></i>
+
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1024</td>
+                            <td>2021/05/24</td>
+                            <td>8</td>
+                            <td>2021/05/25</td>
+                            <td>
+                                2.00
+                            </td>
+                            <td>158.5</td>
+                            <td class="d-flex">
+                                <button data-toggle="modal" data-target="#detailsCenter"
+                                    class="btn btn-sm btn-primary ml-2">
+                                    <i data-toggle="tooltip" data-placement="right" title="تفاصيل"
+                                        class="fas fa-eye tool"></i>
+                                </button>
+                                <button class="btn btn-sm btn-indigo ml-2">
+                                    <a class="add" href="new-order.html">
+                                        <i data-toggle="tooltip" data-placement="left" title="اضافة امر"
+                                            class="tool fas fa-shopping-cart"></i>
+
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1452</td>
+                            <td> 2021/05/24</td>
+                            <td>7</td>
+                            <td>2021/05/25</td>
+                            <td>
+                                2.00
+                            </td>
+                            <td>200</td>
+                            <td class="d-flex">
+                                <button data-toggle="modal" data-target="#detailsCenter"
+                                    class="btn btn-sm btn-primary ml-2">
+                                    <i data-toggle="tooltip" data-placement="right" title="تفاصيل"
+                                        class="tool fas fa-eye"></i>
+                                </button>
+                                <button class="btn btn-sm btn-indigo ml-2">
+                                    <a class="add" href="new-order.html">
+                                        <i data-toggle="tooltip" data-placement="left" title="اضافة امر"
+                                            class="tool fas fa-shopping-cart"></i>
+
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="saved-cars">
+
+                <h6 class="text-right font-weight-bold mt-5 mb-3"> العروض الجزئية </h6>
+               <div class="product-1">
+                   <h5 style="font-size: 15px; border-radius: 5px;"><i class="fas fa-toolbox"></i> طبة زيت موتور  </h5>
+                   <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">الكود</th>
+                            <th scope="col">التاريخ</th>
+                            <th scope="col">ايام الانتهاء</th>
+                            <th scope="col">تاريخ الانتهاء</th>
+                            <th scope="col">الكمية</th>
+                            <th scope="col">القيمة</th>
+                            <th scope="col">اختيار</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1201</td>
+                            <td>2021/05/24</td>
+                            <td>14</td>
+                            <td>2021/05/25</td>
+                            <td>
+                                2.00
+                            </td>
+                            <td>142</td>
+                            <td class="d-flex">
+                                <input type="checkbox">
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1024</td>
+                            <td>2021/05/24</td>
+                            <td>8</td>
+                            <td>2021/05/25</td>
+                            <td>
+                                2.00
+                            </td>
+                            <td>120</td>
+                            <td class="d-flex">
+                                <input type="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1452</td>
+                            <td> 2021/05/24</td>
+                            <td>7</td>
+                            <td>2021/05/25</td>
+                            <td>
+                                2.00
+                            </td>
+                            <td>100</td>
+                            <td class="d-flex">
+                                <input type="checkbox">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               </div>
+               <div class="product-1">
+                <h5 style="font-size: 15px; border-radius: 5px;"><i class="fas fa-toolbox"></i> الصنف التاني     </h5>
+                <table class="table">
+                 <thead>
+                     <tr>
+                         <th scope="col">الكود</th>
+                         <th scope="col">التاريخ</th>
+                         <th scope="col">ايام الانتهاء</th>
+                         <th scope="col">تاريخ الانتهاء</th>
+                         <th scope="col">الكمية</th>
+                         <th scope="col">القيمة</th>
+                         <th scope="col">اختيار</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td>1201</td>
+                         <td>2021/05/24</td>
+                         <td>14</td>
+                         <td>2021/05/25</td>
+                         <td>
+                             2.00
+                         </td>
+                         <td>142</td>
+                         <td class="d-flex">
+                             <input type="radio">
+                            
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>1024</td>
+                         <td>2021/05/24</td>
+                         <td>8</td>
+                         <td>2021/05/25</td>
+                         <td>
+                             2.00
+                         </td>
+                         <td>120</td>
+                         <td class="d-flex">
+                             <input type="radio">
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>1452</td>
+                         <td> 2021/05/24</td>
+                         <td>7</td>
+                         <td>2021/05/25</td>
+                         <td>
+                             2.00
+                         </td>
+                         <td>100</td>
+                         <td class="d-flex">
+                             <input type="radio">
+                         </td>
+                     </tr>
+                 </tbody>
+             </table>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!--   offers deatils modal  -->
+    <div class="modal offer-details-modal fade" id="detailsCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        تفاصيل العرض
+                    </h5>
+                    <!-- Modal close button-->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Modal body-->
+                <div class="modal-body">
+                    <div class="offer-details">
+                        <!-- order-name-->
+                        <div class="peace-name ">
+                            <div class="req-details d-flex justify-content-between">
+                              <h6>عرض رقم
+                                <span id="offer-id ">19752140</span>
+                              </h6>
+                              <span>13/6/2021</span>
+                            </div>
+                            <ul>
+                              <li class="alert alert-info">
+                                <div class="car-info d-flex">
+                                  <h6>
+                                    <i class="fas fa-car"></i>
+                                    بيانات السيارة
+                                  </h6>
+              
+                                  <p> (هيونداي / 2012 / اصلي ) </p>
+              
+                                </div>
+                              </li>
+                              <li class="alert alert-info">
+                                <div class="car-info d-flex">
+                                  <h6>
+                                    <i class="fas fa-thumbtack"></i>
+                                   العنوان
+                                  </h6>
+              
+                                  <p>5,شارع زكريا </p>
+              
+                                </div>
+              
+                              </li>
+                            
+                            <li class="alert alert-info">
+                              <div class="car-info d-flex">
+                                <h6>
+                                  <i class="fas fa-money-bill-alt"></i>
+                                 الدفع
+                                </h6>
+              
+                                <p>فيزا </p>
+              
+                              </div>
+              
+                            </li>
+                            </ul>
+                          </div>
+                        <!-- order breif -->
+                        <div class="breif">
+                            <h5>
+                                <i class="fas fa-toolbox"></i>
+                                طبة زيت موتور
+                            </h5>
+                            <div class="offer-date d-flex justify-content-between ">
+                                <p>الكود </p>
+                                <span>145</span>
+
+                            </div>
+                            <div class="offer-date d-flex justify-content-between">
+                                <p>الكمية </p>
+                                <span>2.00</span>
+
+                            </div>
+                            <div class="offer-date d-flex justify-content-between">
+                                <p>السعر </p>
+                                <span>15.00</span>
+
+                            </div>
+                            <div class="offer-date d-flex justify-content-between">
+                                <p>ملاحظات </p>
+                                <span>لايوجد</span>
+
+                            </div>
+
+
+                        </div>
+                        <div class="breif">
+                            <h5>
+                                <i class="fas fa-toolbox"></i>
+                                مروحة هواء
+                            </h5>
+                            <div class="offer-date d-flex justify-content-between ">
+                                <p>الكود </p>
+                                <span>145</span>
+
+                            </div>
+                            <div class="offer-date d-flex justify-content-between">
+                                <p>الكمية </p>
+                                <span>2.00</span>
+
+                            </div>
+                            <div class="offer-date d-flex justify-content-between">
+                                <p>السعر </p>
+                                <span>15.00</span>
+
+                            </div>
+                            <div class="offer-date d-flex justify-content-between">
+                                <p>ملاحظات </p>
+                                <span>لايوجد</span>
+
+                            </div>
+
+
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="total-price">
+                        <h5>
+                            <i class="fas fa-money-bill-alt"></i>
+                            السعر الكلي 
+                        </h5>
+                        <div class="offer-date d-flex justify-content-between ">
+                            <p>السعر  </p>
+                            <span> 120</span>
+
+                        </div>
+                        <div class="offer-date d-flex justify-content-between">
+                            <p> ض.ق.م </p>
+                            <span> 50</span>
+
+                        </div>
+                        <div class="offer-date d-flex justify-content-between">
+                            <p> الاجمالي </p>
+                            <span> 170</span>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- Modal footer with close and save buttons-->
+                <div class="modal-footer justify-content-start">
+
+                    <button type="button" class="btn btn-primary">
+                        حفظ
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        اغلاق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+    <script src="https://unpkg.com/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/wizard.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // SmartWizard initialize
+            $('#state').smartWizard();
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.tool').tooltip()
+
+        });
+    </script>
+
+</body>
+
+</html>
