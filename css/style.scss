@@ -2931,6 +2931,9 @@ button:focus {
 
 .tooltip.fade {
   font-family: "cairo";
+  @media(max-width:425px){
+    display: none !important;
+  }
 
   .tooltip-inner {
     background-color: $mainColor !important;

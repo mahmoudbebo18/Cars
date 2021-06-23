@@ -1894,6 +1894,9 @@ button:focus {
 
 .tooltip.fade {
   font-family: "cairo"; }
+  @media (max-width: 425px) {
+    .tooltip.fade {
+      display: none !important; } }
   .tooltip.fade .tooltip-inner {
     background-color: #17a2b8 !important;
     color: #fff; }
