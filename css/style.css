@@ -15,7 +15,8 @@ body {
   font-family: "cairo" !important;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  direction: rtl !important; }
+  direction: rtl !important;
+  overflow-x: hidden !important; }
 
 .navbar.nav-main-index .nav-link {
   font-size: 16px !important;
