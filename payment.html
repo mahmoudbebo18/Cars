@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/mdb.min.css">
+    <link rel="stylesheet" href="css/mdb.rtl.min.css">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pay-table.css">
 
@@ -208,20 +210,24 @@
                                         </select>
 
                                     </div>
-                                    <div class="form-group">
-                                        <label>المدينة</label>
-                                        <input type="text" class="form-control">
-
+                                    <div class="form-outline" style="margin-top: 0px;">
+                                        <input type="text" id="form1" class="form-control" />
+                                        <label class="form-label" for="form1">
+                                            المدينة
+                                        </label>
                                     </div>
-                                    <div class="form-group">
-                                        <label>الاسم</label>
-                                        <input type="text" class="form-control">
-
+                                    <div class="form-outline" style="margin-top: 0px;">
+                                        <input type="text" id="form1" class="form-control" />
+                                        <label class="form-label" for="form1">
+                                            الاسم
+                                        </label>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>الرقم السري </label>
-                                        <input type="num" class="form-control">
+                                    <div class="form-outline" style="margin-top: 0px;">
+                                        <input type="text" id="form1" class="form-control" />
+                                        <label class="form-label" for="form1">
+                                            الرقم السري
+                                        </label>
                                     </div>
 
 
@@ -270,7 +276,8 @@
                                     <i class="fas fa-edit"></i>
 
                                 </button>
-                                <button class="btn btn-sm btn-danger ml-2">
+                                <button data-toggle="modal" data-target="#confirmDeleteModalCenter"
+                                    class="btn btn-sm btn-danger ml-2">
                                     <i class="fas fa-trash-alt"></i>
 
                                 </button>
@@ -287,7 +294,8 @@
                                     <i class="fas fa-edit"></i>
 
                                 </button>
-                                <button class="btn btn-sm btn-danger ml-2">
+                                <button data-toggle="modal" data-target="#confirmDeleteModalCenter"
+                                    class="btn btn-sm btn-danger ml-2">
                                     <i class="fas fa-trash-alt"></i>
 
                                 </button>
@@ -303,7 +311,8 @@
                                     <i class="fas fa-edit"></i>
 
                                 </button>
-                                <button class="btn btn-sm btn-danger ml-2">
+                                <button data-toggle="modal" data-target="#confirmDeleteModalCenter"
+                                    class="btn btn-sm btn-danger ml-2">
                                     <i class="fas fa-trash-alt"></i>
 
                                 </button>
@@ -321,12 +330,42 @@
 
 
 
+    <div class="modal fade" id="confirmDeleteModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content text-center">
+                <!--Header-->
+                <div class="modal-header d-flex justify-content-center">
+                    <p class="heading">هل انت متاكد ؟</p>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+
+                    <i class="fas fa-times fa-4x animated rotateIn"></i>
+
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer flex-center">
+                    <a href="" class="btn  btn-primary">نعم</a>
+                    <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">لا</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+
+
+
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
 
     <script src="js/main.js"></script>
     <script>

@@ -13,6 +13,8 @@
     <!-- Font Icon -->
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.rtl.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link href="https://unpkg.com/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
@@ -50,25 +52,25 @@
                     <li class="nav-item">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user ml-2"></i>حسابي                  
+                            <i class="fa fa-user ml-2"></i>حسابي
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="my-account.html">
-                              <i class="fas fa-user"></i>بيانات الحساب
+                                <i class="fas fa-user"></i>بيانات الحساب
                             </a>
                             <a class="dropdown-item" href="address.html">
-                              <i class="fas fa-map-marker-alt"></i>
-                              العنوان
+                                <i class="fas fa-map-marker-alt"></i>
+                                العنوان
                             </a>
                             <a class="dropdown-item" href="payment.html">
-                              <i class="fas fa-money-bill-alt"></i>
-                              طرق الدفع
+                                <i class="fas fa-money-bill-alt"></i>
+                                طرق الدفع
                             </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
-                              <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
                             </a>
-                          </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -111,7 +113,7 @@
 
 
 
-        <div class="container-fluid">
+        <div class="container-fluid" style="width: 60%;">
 
             <div class="tab-content">
 
@@ -151,7 +153,7 @@
 
                                 </div>
                                 <div class="offer-date d-flex justify-content-between">
-                                    <p>السعر  </p>
+                                    <p>السعر </p>
                                     <span>10.00</span>
 
                                 </div>
@@ -166,20 +168,11 @@
                             <!-- offer price -->
                             <div class="peace-name price">
                                 <div class="offer-date d-flex justify-content-between">
-                                    <p> السعر </p>
+                                    <p> الاجمالي </p>
                                     <span>150</span>
 
                                 </div>
-                                <div class="offer-date d-flex justify-content-between">
-                                    <p> ض.ق.م </p>
-                                    <span>20</span>
 
-                                </div>
-                                <div class="offer-date d-flex justify-content-between">
-                                    <p> الاجمالي </p>
-                                    <span>170</span>
-
-                                </div>
 
 
                             </div>
@@ -192,50 +185,329 @@
                     <div class="my-tab tab-two">
                         <!-- add your addresses -->
 
-                        <div class="add-holder">
-                            <div class="address">
-                                <div class="add-head d-flex justify-content-betweens">
-                                    <h6>عنوان الشحن  </h6>
-                                    <span data-toggle="modal" data-target="#addressCenter"> <i class="fas fa-plus"></i>
-                                        اضافة عنوان جديد </span>
-                                </div>
-                            </div>
-                            <!-- address form -->
-                            <form class="mt-3">
-                                <div class="form-group">
-                                    <select class="form-select form-control" aria-label="Default select example">
-                                        <optgroup>
-                                            <option selected>تيست</option>
-                                            <option value="1">تيست 1</option>
-                                            <option value="2">تيست 2</option>
-                                            <option value="3">تيست 3</option>
-                                        </optgroup>
-                                    </select>
-                                </div>
+                        <div class="form-group d-flex flex-column cars" style="padding:0">
+                            <div class="label-newcar d-flex justify-content-between align-items-center p-2"
+                                style="box-shadow: 0 0 5px #ccc;">
+                                <label>عنوان الشحن </label>
+                                <span style="margin: 0 !important;" class="add-new-car" data-toggle="modal"
+                                    data-target="#addressCenter">
+                                    <i class="fa fa-plus"></i> اضف عنوان جديد
+                                </span>
+                                <!-- 
+                                        Add New Address modal
+                                      -->
+                                <div class="modal fade" id="addressCenter" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">
+                                                    اضف عنوان جديد
+                                                </h5>
+                                                <!-- Modal close button-->
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <!-- Modal body-->
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>نوع العنوان </label>
+                                                        <select class="form-select form-control main"
+                                                            aria-label="Default select example">
+                                                            <option selected="">شحن </option>
+                                                            <option value="1"> فواتير</option>
 
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="formControlLg"
+                                                                class="form-control form-control-lg">
+                                                            <label class="form-label" for="formControlLg"
+                                                                style="margin-left: 0px;">اسم العنوان </label>
+                                                            <div class="form-notch">
+                                                                <div class="form-notch-leading" style="width: 9px;">
+                                                                </div>
+                                                                <div class="form-notch-middle" style="width: 67.2px;">
+                                                                </div>
+                                                                <div class="form-notch-trailing"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mod-mark d-flex">
+                                                        <div class="form-group">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">البلد </label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle"
+                                                                        style="width: 29.6px;"></div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group sec">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">المدينة</label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle"
+                                                                        style="width: 44.8px;"></div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mod-mark d-flex">
+                                                        <div class="form-group">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">المنطقة </label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle" style="width: 52px;">
+                                                                    </div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group sec">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">الشارع</label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle"
+                                                                        style="width: 38.4px;"></div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- Modal footer with close and save buttons-->
+                                            <div class="modal-footer justify-content-start">
+
+                                                <button type="button" class="btn btn-primary">
+                                                    حفظ
+                                                </button>
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    اغلاق
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--//// add new Address modal -->
+                            </div>
+                            <form class="select-old-add p-3">
+                                <div class="add alert-info" id="add-1">
+                                    <div class="add-head">
+                                        <input type="checkbox">
+                                        <span>العنوان الاول </span>
+                                    </div>
+                                    <div class="add-content">
+                                        <p> <span class="country">مصر , </span> <span class="city">الاسكندرية </span>
+                                        </p>
+                                        <p> <span class="area">المحلة , </span> <span class="street">14 </span></p>
+                                    </div>
+                                </div>
+                                <div class="add alert-info" id="add-1">
+                                    <div class="add-head">
+                                        <input type="checkbox">
+                                        <span>العنوان الثاني </span>
+                                    </div>
+                                    <div class="add-content">
+                                        <p> <span class="country">مصر , </span> <span class="city">الاسكندرية </span>
+                                        </p>
+                                        <p> <span class="area">المحلة , </span> <span class="street">14 </span></p>
+                                    </div>
+                                </div>
                             </form>
                         </div>
-                        <div class="add-holder">
-                            <div class="address">
-                                <div class="add-head d-flex justify-content-betweens">
-                                    <h6>عنوان الفواتير  </h6>
-                                    <span data-toggle="modal" data-target="#addressCenter"> <i class="fas fa-plus"></i>
-                                        اضافة عنوان جديد </span>
-                                </div>
-                            </div>
-                            <!-- address form -->
-                            <form class="mt-3">
-                                <div class="form-group">
-                                    <select class="form-select form-control" aria-label="Default select example">
-                                        <optgroup>
-                                            <option selected>تيست</option>
-                                            <option value="1">تيست 1</option>
-                                            <option value="2">تيست 2</option>
-                                            <option value="3">تيست 3</option>
-                                        </optgroup>
-                                    </select>
-                                </div>
+                        <div class="form-group d-flex flex-column cars" style="padding:0">
+                            <div class="label-newcar d-flex justify-content-between align-items-center p-2"
+                                style="box-shadow: 0 0 5px #ccc;">
+                                <label>عنوان الفواتير </label>
+                                <span style="margin: 0 !important;" class="add-new-car" data-toggle="modal"
+                                    data-target="#addressCenter">
+                                    <i class="fa fa-plus"></i> اضف عنوان جديد
+                                </span>
+                                <!-- 
+                                        Add New Car modal
+                                      -->
+                                <div class="modal fade" id="addressCenter" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <!-- Modal Header -->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">
+                                                    اضف عنوان جديد
+                                                </h5>
+                                                <!-- Modal close button-->
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <!-- Modal body-->
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label>نوع العنوان </label>
+                                                        <select class="form-select form-control main"
+                                                            aria-label="Default select example">
+                                                            <option selected="">شحن </option>
+                                                            <option value="1"> فواتير</option>
 
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="form-outline">
+                                                            <input type="text" id="formControlLg"
+                                                                class="form-control form-control-lg">
+                                                            <label class="form-label" for="formControlLg"
+                                                                style="margin-left: 0px;">اسم العنوان </label>
+                                                            <div class="form-notch">
+                                                                <div class="form-notch-leading" style="width: 9px;">
+                                                                </div>
+                                                                <div class="form-notch-middle" style="width: 8px;">
+                                                                </div>
+                                                                <div class="form-notch-trailing"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mod-mark d-flex">
+                                                        <div class="form-group">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">البلد </label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle" style="width: 8px;">
+                                                                    </div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group sec">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">المدينة</label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle" style="width: 8px;">
+                                                                    </div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="mod-mark d-flex">
+                                                        <div class="form-group">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">المنطقة </label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle" style="width: 8px;">
+                                                                    </div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group sec">
+                                                            <div class="form-outline">
+                                                                <input type="text" id="formControlLg"
+                                                                    class="form-control form-control-lg">
+                                                                <label class="form-label" for="formControlLg"
+                                                                    style="margin-left: 0px;">الشارع</label>
+                                                                <div class="form-notch">
+                                                                    <div class="form-notch-leading" style="width: 9px;">
+                                                                    </div>
+                                                                    <div class="form-notch-middle" style="width: 8px;">
+                                                                    </div>
+                                                                    <div class="form-notch-trailing"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <!-- Modal footer with close and save buttons-->
+                                            <div class="modal-footer justify-content-start">
+
+                                                <button type="button" class="btn btn-primary waves-effect waves-light">
+                                                    حفظ
+                                                </button>
+                                                <button type="button" class="btn btn-secondary waves-effect waves-light"
+                                                    data-dismiss="modal">
+                                                    اغلاق
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--//// add new car modal -->
+                            </div>
+                            <form class="select-old-add p-3">
+                                <div class="add alert-info" id="add-1">
+                                    <div class="add-head">
+                                        <input type="checkbox">
+                                        <span>العنوان الاول </span>
+                                    </div>
+                                    <div class="add-content">
+                                        <p> <span class="country">مصر , </span> <span class="city">الاسكندرية </span>
+                                        </p>
+                                        <p> <span class="area">المحلة , </span> <span class="street">14 </span></p>
+                                    </div>
+                                </div>
+                                <div class="add alert-info" id="add-1">
+                                    <div class="add-head">
+                                        <input type="checkbox">
+                                        <span>العنوان الثاني </span>
+                                    </div>
+                                    <div class="add-content">
+                                        <p> <span class="country">مصر , </span> <span class="city">الاسكندرية </span>
+                                        </p>
+                                        <p> <span class="area">المحلة , </span> <span class="street">14 </span></p>
+                                    </div>
+                                </div>
                             </form>
                         </div>
 
@@ -318,22 +590,22 @@
                                 </div>
                             </div>
                             <div class="d-flex paied-price">
-                                
-                            <div class="form-group">
-                                <label>الاجمالي </label>
-                                <input class="form-control" type="text" readonly placeholder="120 ج.م">
-                            </div>
-                            <div class="form-group">
-                                <label>وسيلة الدفع </label>
-                                <select class="form-select form-control" aria-label="Default select example">
-                                    <optgroup>
-                                        <option selected>فيزا</option>
-                                        <option value="1">تيست 1</option>
-                                        <option value="2">تيست 2</option>
-                                        <option value="3">تيست 3</option>
-                                    </optgroup>
-                                </select>
-                            </div>
+
+                                <div class="form-group">
+                                    <label>الاجمالي </label>
+                                    <input class="form-control" type="text" readonly placeholder="120 ج.م">
+                                </div>
+                                <div class="form-group">
+                                    <label>وسيلة الدفع </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <optgroup>
+                                            <option selected>فيزا</option>
+                                            <option value="1">تيست 1</option>
+                                            <option value="2">تيست 2</option>
+                                            <option value="3">تيست 3</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
                             </div>
                             <div class="d-flex paied-price">
                                 <div class="form-group">
@@ -345,17 +617,17 @@
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-                           <div class="d-flex paied-price">
-                            <div class="form-group">
-                                <label>تاريخ الانتهاء </label>
-                                <input type="date" class="form-control">
+                            <div class="d-flex paied-price">
+                                <div class="form-group">
+                                    <label>تاريخ الانتهاء </label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>الرقم السري </label>
+                                    <input type="text" class="form-control">
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>الرقم السري </label>
-                                <input type="text" class="form-control">
-                            </div>
-                           </div>
-                            
+
 
                         </form>
                         <button class="btn btn-success">تاكيد الدفع </button>
@@ -368,8 +640,9 @@
     <!-- JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
+    </script>
     <script src="https://unpkg.com/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
-
     <script src="js/wizard.js"></script>
     <script>
         $(document).ready(function () {
