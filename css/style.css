@@ -494,6 +494,22 @@ table.dataTable thead .sorting_desc_disabled {
 
 #modalPush .modal-dialog {
   width: 50% !important; }
+  @media (max-width: 991px) {
+    #modalPush .modal-dialog {
+      width: 60% !important;
+      max-width: 100% !important; } }
+  @media (max-width: 767px) {
+    #modalPush .modal-dialog {
+      width: 75% !important;
+      max-width: 100% !important; } }
+  @media (max-width: 575px) {
+    #modalPush .modal-dialog {
+      width: 85% !important;
+      max-width: 100% !important; } }
+  @media (max-width: 425px) {
+    #modalPush .modal-dialog {
+      width: 95% !important;
+      max-width: 100% !important; } }
 
 .modal-notify {
   margin-top: 100px; }

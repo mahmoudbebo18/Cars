@@ -812,6 +812,22 @@ table.dataTable thead .sorting_desc_disabled {
 #modalPush {
   .modal-dialog {
     width: 50% !important;
+    @media(max-width:991px){
+      width:60% !important;
+      max-width:100% !important;
+    }
+     @media(max-width:767px){
+      width:75% !important;
+      max-width:100% !important;
+    }
+     @media(max-width:575px){
+      width:85% !important;
+      max-width:100% !important;
+    }
+     @media(max-width:425px){
+      width:95% !important;
+      max-width:100% !important;
+    }
   }
 
 }
