@@ -15,15 +15,19 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://unpkg.com/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
   <!-- Main css -->
-  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/mdb.rtl.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/new-request-table.css">
+
 </head>
 
 <body>
   <!-- Start Nav Bar -->
   <header>
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index-user.html">
         <img src="imgs/logo.png" width="80px">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -49,9 +53,9 @@
               <i class="fa fa-car ml-2"></i>سياراتي </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-user ml-2"></i>حسابي                  
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user ml-2"></i>حسابي
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="my-account.html">
@@ -70,7 +74,7 @@
                 <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
               </a>
             </div>
-        </li>
+          </li>
         </ul>
       </div>
     </nav>
@@ -109,7 +113,7 @@
       </li>
     </ul>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="width:60%">
       <div class="tab-content">
 
         <!-- first step -->
@@ -119,16 +123,20 @@
             <form class="car-mod">
               <div>
                 <label for="01">اصلي</label>
-              <input id="01" type="radio" name="r" value="1" checked>
+                <input id="01" type="radio" name="r" value="1" checked>
               </div>
               <div>
                 <label for="02">تجاري</label>
-              <input id="02" type="radio" name="r" value="2">
+                <input id="02" type="radio" name="r" value="2">
               </div>
-             <div>
-              <label for="03">مستعمل</label>
-              <input id="03" type="radio" name="r" value="3">
-             </div>
+              <!--
+                <div>
+                <label for="03">مستعمل</label>
+                <input id="03" type="radio" name="r" value="3">
+              </div>
+
+              -->
+              
             </form>
 
             <!-- choose your car -->
@@ -164,55 +172,53 @@
                       <!-- Modal body-->
                       <div class="modal-body">
                         <form>
-                          <div class="form-group">
-                            <label>الماركة</label>
-                            <select required class="form-select form-control" aria-label="Default select example">
-                              <optgroup>
-                                <option selected>هيونداي</option>
-                                <option value="1">تيست 1</option>
-                                <option value="2">تيست 2</option>
-                                <option value="3">تيست 3</option>
-                              </optgroup>
-                            </select>
+                          <div class="mod-mark d-flex mb-3">
+                            <div class="form-group ">
+                              <label>الماركة</label>
+                              <select required class="form-select form-control" aria-label="Default select example">
+                                <optgroup>
+                                  <option selected>هيونداي</option>
+                                  <option value="1">تيست 1</option>
+                                  <option value="2">تيست 2</option>
+                                  <option value="3">تيست 3</option>
+                                </optgroup>
+                              </select>
+                            </div>
+                            <div class="form-group sec">
+                              <label>الموديل</label>
+                              <select required class="form-select form-control" aria-label="Default select example">
+                                <optgroup>
+                                  <option selected>هيونداي</option>
+                                  <option value="1">تيست 1</option>
+                                  <option value="2">تيست 2</option>
+                                  <option value="3">تيست 3</option>
+                                </optgroup>
+                              </select>
+                            </div>
                           </div>
-                          <div class="form-group">
-                            <label>الموديل</label>
-                            <select required class="form-select form-control" aria-label="Default select example">
-                              <optgroup>
-                                <option selected>هيونداي</option>
-                                <option value="1">تيست 1</option>
-                                <option value="2">تيست 2</option>
-                                <option value="3">تيست 3</option>
-                              </optgroup>
-                            </select>
+                          <div class="form-outline">
+                            <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                            <label class="form-label" for="formControlLg">الشاسيه</label>
                           </div>
-                          <div class="form-group">
-                            <label>الماركة</label>
-                            <select required class="form-select form-control" aria-label="Default select example">
-                              <optgroup>
-                                <option selected>هيونداي</option>
-                                <option value="1">تيست 1</option>
-                                <option value="2">تيست 2</option>
-                                <option value="3">تيست 3</option>
-                              </optgroup>
-                            </select>
-                          </div>
-                          <div class="form-group">
-                            <label>الشاسية</label>
-                            <input type="text" class="form-control">
+                          <div class="mod-mark d-flex">
+                            <div class="form-group">
+                              <div class="form-outline">
+                                <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                                <label class="form-label" for="formControlLg">سنة الصنع</label>
+                              </div>
+                            </div>
+                            <div class="form-group sec">
+                              <div class="form-outline">
+                                <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                                <label class="form-label" for="formControlLg">اللوحة</label>
+                              </div>
+                            </div>
 
                           </div>
-                          <div class="form-group">
-                            <label>اللوحة</label>
-                            <input type="text" class="form-control">
-
+                          <div class="form-outline">
+                            <textarea class="form-control" id="textAreaExample" rows="1"></textarea>
+                            <label class="form-label" for="textAreaExample">ملاحظات</label>
                           </div>
-                          <div class="form-group">
-                            <label>ملاحظات</label>
-                            <textarea class="form-control" rows="3"></textarea>
-
-                          </div>
-
                         </form>
                       </div>
                       <!-- Modal footer with close and save buttons-->
@@ -241,97 +247,62 @@
         </div>
         <!-- second step -->
         <div id="step-2" class="tab-pane" role="tabpanel">
-          <div class="my-tab tab-two">
+          <div class="my-tab tab-two d-flex">
             <!-- choose your car -->
-            <div class="form-group d-flex flex-column cars">
-              <div class="
-                          label-newcar
-                          d-flex
-                          justify-content-between
-                          align-items-center
-                        ">
-                <label>اسم القطعة </label>
-                <span class="add-new-car" data-toggle="modal" data-target="#peaceCenter">
-                  <i class="fa fa-plus"></i> اضف قطعة جديدة
-                </span>
-                <!-- 
-                          Add New Car modal
-                        -->
-                <div class="modal fade" id="peaceCenter" tabindex="-1" role="dialog"
-                  aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <!-- Modal Header -->
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">
-                          اضف قطعة جديدة
-                        </h5>
-                        <!-- Modal close button-->
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <!-- Modal body-->
-                      <div class="modal-body">
-                        <form>
+            <form class="chose-your-peace">
+              <div class="form-group d-flex flex-column cars" style="padding-top:16px">
 
-                          <div class="form-group">
-                            <label>الاسم</label>
-                            <input type="text" class="form-control">
-
-                          </div>
-                          <div class="form-group">
-                            <label>الرقم</label>
-                            <input type="text" class="form-control">
-
-                          </div>
-                          <div class="form-group">
-                            <label>الكمية</label>
-                            <input type="text" class="form-control">
-
-                          </div>
-                          <div class="form-group">
-                            <label>ملاحظات</label>
-                            <textarea class="form-control" rows="3"></textarea>
-
-                          </div>
-
-                        </form>
-                      </div>
-                      <!-- Modal footer with close and save buttons-->
-                      <div class="modal-footer justify-content-start">
-
-                        <button type="button" class="btn btn-primary">
-                          حفظ
-                        </button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                          اغلاق
-                        </button>
-                      </div>
+                <select class="form-select form-control main" aria-label="Default select example">
+                  <option selected>هيونداي</option>
+                  <option value="1">تيست 1</option>
+                  <option value="2">تيست 2</option>
+                  <option value="3">تيست 3</option>
+                </select>
+                <div class="mod-mark d-flex">
+                  <div class="form-group">
+                    <div class="form-outline">
+                      <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                      <label class="form-label" for="formControlLg">رقم القطعة </label>
                     </div>
                   </div>
+                  <div class="form-group sec">
+                    <div class="form-outline">
+                      <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                      <label class="form-label" for="formControlLg">الكمية</label>
+                    </div>
+                  </div>
+
                 </div>
-                <!--//// add new car modal -->
+                <div class="form-outline">
+                  <textarea class="form-control" id="textAreaExample" rows="1"></textarea>
+                  <label class="form-label" for="textAreaExample">ملاحظات</label>
+                </div>
+                <button style="margin: 0;" class="btn btn-primary mb-3">اضف قطعة جديدة</button>
               </div>
-              <select class="form-select form-control main" aria-label="Default select example">
-                <option selected>هيونداي</option>
-                <option value="1">تيست 1</option>
-                <option value="2">تيست 2</option>
-                <option value="3">تيست 3</option>
-              </select>
-              <div class="my-peaces mt-2">
-                <label>رقم القطعة</label>
-                <input type="text" class="form-control">
+
+            </form>
+            <!-- table to show chosen peaces -->
+
+            <div class="chosen-peaces " style="margin-top: 15px;">
+              <div class="peace-number d-flex alert-info justify-content-between align-items-center">
+                <p> <i class="fas fa-toolbox"></i>عدد القطع </p>
+                <span>12</span>
+
               </div>
-              <div class="my-peaces mt-2">
-                <label>الكمية </label>
-                <input type="text" class="form-control">
+              <div class="peace-number d-flex alert-info justify-content-between align-items-center">
+                <p> <i class="fas fa-money-bill"></i>السعر </p>
+                <span>12</span>
+
               </div>
-              <div class="my-peaces mt-2">
-                <label>ملاحظات</label>
-                <textarea rows="3" class="form-control nots"></textarea>
+              <div class="peace-number d-flex alert-info justify-content-between align-items-center">
+                <p> <i class="fab fa-cc-mastercard"></i>المتبقي </p>
+                <span>12</span>
+
               </div>
             </div>
+
+
+
           </div>
         </div>
         <!-- third step -->
@@ -393,30 +364,34 @@
             </table>
 
             <!-- Confirm delete popup -->
-
+            <!--Modal: modalConfirmDelete-->
             <div class="modal fade" id="confirmDeleteModalCenter" tabindex="-1" role="dialog"
-              aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">هل انت متاكد من حذف هذا الطلب ؟</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+              aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+                <!--Content-->
+                <div class="modal-content text-center">
+                  <!--Header-->
+                  <div class="modal-header d-flex justify-content-center">
+                    <p class="heading">هل انت متاكد ؟</p>
                   </div>
+
+                  <!--Body-->
                   <div class="modal-body">
 
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">نعم </button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">اغلاق</button>
+                    <i class="fas fa-times fa-4x animated rotateIn"></i>
 
+                  </div>
+
+                  <!--Footer-->
+                  <div class="modal-footer flex-center">
+                    <a href="" class="btn  btn-outline-danger">نعم</a>
+                    <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">لا</a>
                   </div>
                 </div>
+                <!--/.Content-->
               </div>
             </div>
-
-
+            <!--Modal: modalConfirmDelete-->
           </div>
         </div>
 
@@ -425,15 +400,12 @@
         <div id="step-4" class="tab-pane" role="tabpanel">
           <div class="my-tab tab-four">
 
-            <div class="form-group d-flex flex-column cars">
-              <div class="
-                          label-newcar
-                          d-flex
-                          justify-content-between
-                          align-items-center
-                        ">
-                <label>العنوان </label>
-                <span class="add-new-car" data-toggle="modal" data-target="#addressCenter">
+            <div class="form-group d-flex flex-column cars" style="padding:0">
+              <div class="label-newcar d-flex justify-content-between align-items-center p-3"
+                style="box-shadow: 0 0 5px #ccc;">
+                <label>عنوان  الشحن </label>
+                <span style="margin: 0 !important;" class="add-new-car" data-toggle="modal"
+                  data-target="#addressCenter">
                   <i class="fa fa-plus"></i> اضف عنوان جديد
                 </span>
                 <!-- 
@@ -461,35 +433,46 @@
                             <select class="form-select form-control main" aria-label="Default select example">
                               <option selected="">شحن </option>
                               <option value="1"> فواتير</option>
-                             
+
                             </select>
 
                           </div>
                           <div class="form-group">
-                            <label>البلد</label>
-                            <input type="text" class="form-control">
+                            <div class="form-outline">
+                              <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                              <label class="form-label" for="formControlLg">اسم العنوان </label>
+                            </div>
+                          </div>
+                          <div class="mod-mark d-flex">
+                            <div class="form-group">
+                              <div class="form-outline">
+                                <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                                <label class="form-label" for="formControlLg">البلد </label>
+                              </div>
+                            </div>
+                            <div class="form-group sec">
+                              <div class="form-outline">
+                                <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                                <label class="form-label" for="formControlLg">المدينة</label>
+                              </div>
+                            </div>
 
                           </div>
-                          <div class="form-group">
-                            <label>المدينة</label>
-                            <input type="text" class="form-control">
+                          <div class="mod-mark d-flex">
+                            <div class="form-group">
+                              <div class="form-outline">
+                                <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                                <label class="form-label" for="formControlLg">المنطقة </label>
+                              </div>
+                            </div>
+                            <div class="form-group sec">
+                              <div class="form-outline">
+                                <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                                <label class="form-label" for="formControlLg">الشارع</label>
+                              </div>
+                            </div>
 
                           </div>
-                          <div class="form-group">
-                            <label>المنطقة</label>
-                            <input type="text" class="form-control">
-
-                          </div>
-                          <div class="form-group">
-                            <label>الشارع</label>
-                            <input type="text" class="form-control">
-
-                          </div>
-                          <div class="form-group">
-                            <label>اتجاهات اضافية (اختياري)</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                          </div>
-
                         </form>
                       </div>
                       <!-- Modal footer with close and save buttons-->
@@ -507,12 +490,28 @@
                 </div>
                 <!--//// add new car modal -->
               </div>
-              <select class="form-select form-control main" aria-label="Default select example">
-                <option selected="">العنوان</option>
-                <option value="1">تيست 1</option>
-                <option value="2">تيست 2</option>
-                <option value="3">تيست 3</option>
-              </select>
+              <form class="select-old-add p-3">
+                <div class="add alert-info" id="add-1">
+                  <div class="add-head">
+                    <input type="checkbox">
+                    <span>العنوان الاول </span>
+                  </div>
+                  <div class="add-content">
+                    <p> <span class="country">مصر , </span> <span class="city">الاسكندرية </span></p>
+                    <p> <span class="area">المحلة , </span> <span class="street">14 </span></p>
+                  </div>
+                </div>
+                <div class="add alert-info" id="add-1">
+                  <div class="add-head">
+                    <input type="checkbox">
+                    <span>العنوان الثاني </span>
+                  </div>
+                  <div class="add-content">
+                    <p> <span class="country">مصر , </span> <span class="city">الاسكندرية </span></p>
+                    <p> <span class="area">المحلة , </span> <span class="street">14 </span></p>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -521,22 +520,17 @@
           <div class="my-tab tab-five ">
 
             <div class="pay">
-              <div class="form-group">
-                <label>مصاريف الطلب</label>
-                <input readonly type="text" class="form-control">
+              <div class="mod-mark d-flex">
+                <div class="form-group">
+                  <div class="form-outline">
+                    <input type="text" id="formControlLg" class="form-control form-control-lg" />
+                    <label class="form-label" for="formControlLg">مصاريف الطلب </label>
+                  </div>
+                </div>
               </div>
+             
               <div class="form-group">
-                <label>التوصيل</label>
-                <input readonly type="text" class="form-control">
-
-              </div>
-              <div class="form-group">
-                <label>الاجمالي</label>
-                <input readonly type="text" class="form-control">
-
-              </div>
-              <div class="form-group">
-                <label>طريقة الدفع الرئيسية</label>
+                <label class="font-weight-bold">طريقة الدفع الرئيسية</label>
                 <select class="form-select form-control main" aria-label="Default select example">
                   <option selected="">العنوان</option>
                   <option value="1">تيست 1</option>
@@ -545,7 +539,7 @@
                 </select>
 
               </div>
-              <button class="btn btn-success">ارسل</button>
+              <button data-toggle="modal" data-target="#modalPush" class="btn btn-success">ارسل</button>
             </div>
 
 
@@ -556,13 +550,57 @@
       </div>
     </div>
   </div>
+
+
+
+
+  <!-- confirmation modal -->
+  <div class="modal fade" id="modalPush" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content text-center">
+        <!--Header-->
+        <div class="modal-header d-flex justify-content-center">
+          <p class="heading">شكرا لك </p>
+        </div>
+
+        <!--Body-->
+        <div class="modal-body">
+
+          <i class="fas fa-check fa-4x animated rotateIn mb-4"></i>
+
+          <p>
+            تم استلام طلبك رقم <span>12345 </span> يمكنك الذهاب الى صفحة الطلبات لمتابعة طلبك العروض المقدمة عليه
+          </p>
+
+        </div>
+
+        <!--Footer-->
+        <div class="modal-footer flex-center">
+          <a href="all-requests.html" class="btn btn-info">اذهب</a>
+          <a type="button" class="btn btn-outline-info waves-effect" data-dismiss="modal">اغلاق</a>
+        </div>
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+  <!--Modal: modalPush-->
+
+
+
+
+
+
   <!-- JS -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/mdb.min.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
   <script src="https://unpkg.com/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
   <script src="js/wizard.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
 
   <script>
     $(document).ready(function () {

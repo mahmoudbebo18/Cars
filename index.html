@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- chorom meta-->
-
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
     <title>Rest</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/mdb.min.css">
-
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body dir="rtl">
     <!-- Start Nav Bar -->
-    <header>
-        <nav class="navbar navbar-expand-lg">
+    <header class="async">
+        <nav class="navbar nav-main-index navbar-expand-lg">
             <a class="navbar-brand" href="#">
                 <img src="imgs/logo.png" width="80px">
             </a>
@@ -32,65 +26,803 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-table ml-2"></i>طلباتي
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active">
+                        <a  data-target=".slider" class="nav-link" href="index.html">
+                            <i class="fa fa-home ml-2"></i>الرئيسية
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-pen"></i>
-                            اوامري
+                        <a data-slide="ab" data-target=".about-holder" class="nav-link" href="#">
+                            <i class="fas fa-sitemap"></i>
+                            عن الشركة
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-car ml-2"></i>سياراتي </a>
+                        <a data-slide="co" data-target=".companies-holder" class="nav-link" href="#">
+                            <i class="far fa-building"></i>الشركات </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fa fa-user ml-2"></i>حسابي                  
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="my-account.html">
-                              <i class="fas fa-user"></i>بيانات الحساب
-                            </a>
-                            <a class="dropdown-item" href="address.html">
-                              <i class="fas fa-map-marker-alt"></i>
-                              العنوان
-                            </a>
-                            <a class="dropdown-item" href="payment.html">
-                              <i class="fas fa-money-bill-alt"></i>
-                              طرق الدفع
-                            </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">
-                              <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
-                            </a>
-                          </div>
+                        <a data-slide="ve" data-target=".vendors-holder" class="nav-link" href="#">
+                            <i class="fa fa-users ml-2"></i> الموردين </a>
                     </li>
+                    <li class="nav-item">
+                        <a data-slide="qu" data-target=".questions-holder" class="nav-link" href="#">
+                            <i class="fas fa-info"></i> اسئلة شائعة </a>
+                    </li>
+                    <li   class="nav-item">
+                        <a data-slide="cu" data-target=".contact-holder" class="nav-link" href="#">
+                            <i class="fa fa-envelope-open ml-2"></i> اتصل بنا </a>
+                    </li>
+
                 </ul>
+                <div class="log">
+                    <a class="login" href="login.html">تسجيل  </a>
+                    <span class="sep">\</span>
+                    <a class="signup" href="signup.html"> اشتراك  </a>
+                </div>
             </div>
         </nav>
         <!--///nav-->
+        <section class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="imgs/slider3.jpeg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="imgs/slider2.jpeg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="imgs/slider1.jpeg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <i class="fas fa-chevron-left" class="sr-only"></i>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <i class="fas fa-chevron-right" class="sr-only"></i>
+                </a>
+            </div>
+
+        </section>
     </header>
+    <!-- end header -->
+
+    <!-- start how to order -->
 
 
-  
+
+    <section class="how-to-order text-center async" id="ab">
+        <div class="container-fluid">
+            <div class="main-head">
+                <h2>كيف تقوم بعمل طلب..؟</h2>
+                <p>نفذ طلبك من خلال أربع خطوات بسيطة</p>
+            </div>
+
+            <div class="four-steps">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="step-content">
+                            <img src="imgs/steps-order.png">
+                            <div class="step-caption">
+                                <h6>الطلب</h6>
+                                <p>اطلب أي قطعة غيار بدون أن تغادر مكانك.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="step-content">
+                            <img src="imgs/steps-price.png">
+                            <div class="step-caption">
+                                <h6>الطلب</h6>
+                                <p>اطلب أي قطعة غيار بدون أن تغادر مكانك.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="step-content">
+                            <img src="imgs/steps-confirm.png">
+                            <div class="step-caption">
+                                <h6>الطلب</h6>
+                                <p>اطلب أي قطعة غيار بدون أن تغادر مكانك.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="step-content">
+                            <img src="imgs/steps-delivery.png">
+                            <div class="step-caption">
+                                <h6>الطلب</h6>
+                                <p>اطلب أي قطعة غيار بدون أن تغادر مكانك.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <!-- End how to order -->
+
+
+    <!--about departi -->
+    <section class="about-holder async" id="ab">
+        <!-- start through departi  -->
+        <section class="through-departi">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 about-caption">
+                        <div class="departi-info">
+                            <h2 class="h1">عن ديبارتي</h2>
+                            <p>
+                                ديبارتي هي منصة إلكترونية تمدك بالعديد من الخيارات المرتبطة بقطع غيار سيارتك، سواء جديدة
+                                أو
+                                مستعملة.
+                            </p>
+                            <p class="second">كما أنها المنصة الوحيدة التي تعطيك عروض أسعار مختلفة قبل شراء أي قطعة غيار
+                                لتتمكن من الاختيار بين خيارات متعددة.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="imgs/about.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end through departi-->
+
+
+
+        <section class="how-to-order text-center">
+            <div class="container-fluid">
+                <div class="main-head">
+                    <h2 style="margin-bottom: 32px;">من خلال ديبارتي</h2>
+                </div>
+
+                <div class="four-steps">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="step-content">
+                                <img src="imgs/steps-order.png">
+                                <div class="step-caption">
+
+                                    <p>يمكنك طلب عروض أسعار مختلفة لقطع الغيار سواء جديدة أو مستعملة.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="step-content">
+                                <img src="imgs/steps-price.png">
+                                <div class="step-caption">
+
+                                    <p>يمكنك تلقي أكثر من عرض سعر لقطع الغيار المطلوبة واختيار السعر الأنسب لك.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="step-content">
+                                <img src="imgs/steps-confirm.png">
+                                <div class="step-caption">
+
+                                    <p>يمكنك التواصل مع فريق متخصص في قطع الغيار والحصول دائما على الإجابة الصحيحة
+                                        لأسئلتك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="step-content">
+                                <img src="imgs/steps-delivery.png">
+                                <div class="step-caption">
+
+                                    <p>يمكنك طلب قطع الغيار وستصلك أينما كنت داخل جمهورية مصر العربية.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- End how to order -->
+    </section>
+    <!--////// end abput holder -->
+
+
+
+    <!-- companies holder -->
+
+    <section class="companies-holder async" id="co">
+        <section class="through-departi">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 about-caption">
+                        <div class="departi-info">
+                            <h2 class="h1">أكثر من 300 تاجر مستعدين لخدمتك الآن!</h2>
+                            <p>
+                                اطلب بسهولة ، وادفع بمرونة ، وتعامل بأمان مع أكبر تشكيلة من التجار .. وخدمة التوصيل
+                                السريع!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="imgs/about.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end through departi-->
+
+
+
+        <section class="how-to-order text-center">
+            <div class="container-fluid">
+                <div class="main-head">
+                    <h2 style="margin-bottom: 32px;">فوائد ديبارتي للشركات
+                    </h2>
+                </div>
+
+                <div class="four-steps">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-order.png">
+                                <div class="step-caption">
+                                    <h6>مندوب مبيعات مخصص لك
+                                    </h6>
+                                    <p>يمكنك طلب عروض أسعار مختلفة للأجزاء الجديدة أو المستعملة.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-price.png">
+                                <div class="step-caption">
+                                    <h6>توصيل سريع
+                                    </h6>
+                                    <p>
+                                        يمكنك طلب قطع الغيار وستصلك أينما كنت داخل جمهورية مصر العربية.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-confirm.png">
+                                <div class="step-caption">
+                                    <h6>خيارات متعددة</h6>
+                                    <p>يمكنك التواصل مع فريق متخصص في قطع الغيار والعثور دائمًا على الإجابة الصحيحة
+                                        لأسئلتك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-delivery.png">
+                                <div class="step-caption">
+                                    <h6>تسهيلات سداد مختلفة</h6>
+                                    <p>يمكنك طلب عروض أسعار مختلفة للأجزاء الجديدة أو المستعملة.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-price.png">
+                                <div class="step-caption">
+                                    <h6>تحديد أولويات طلباتك
+
+                                    </h6>
+                                    <p>
+                                        يمكنك الحصول على أكثر من عرض أسعار للأجزاء المطلوبة واختيار السعر الأنسب لك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-confirm.png">
+                                <div class="step-caption">
+                                    <h6>قريباً!</h6>
+                                    <p>
+
+                                        قريباً!
+                                        يمكنك التواصل مع فريق متخصص في قطع الغيار والعثور دائمًا على الإجابة الصحيحة
+                                        لأسئلتك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--/////end companies holder -->
+
+    <!-- vendors holder -->
+
+
+    <section class="vendors-holder async" id="ve">
+
+        <section class="through-departi">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 about-caption">
+                        <div class="departi-info">
+                            <h2 class="h1">أكثر من 300 تاجر مستعدين لخدمتك الآن!</h2>
+                            <p>
+                                اطلب بسهولة ، وادفع بمرونة ، وتعامل بأمان مع أكبر تشكيلة من التجار .. وخدمة التوصيل
+                                السريع!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="imgs/about.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end through departi-->
+
+
+
+        <section class="how-to-order text-center">
+            <div class="container-fluid">
+                <div class="main-head">
+                    <h2 style="margin-bottom: 32px;">فوائد ديبارتي للشركات
+                    </h2>
+                </div>
+
+                <div class="four-steps">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-order.png">
+                                <div class="step-caption">
+                                    <h6>مندوب مبيعات مخصص لك
+                                    </h6>
+                                    <p>يمكنك طلب عروض أسعار مختلفة للأجزاء الجديدة أو المستعملة.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-price.png">
+                                <div class="step-caption">
+                                    <h6>توصيل سريع
+                                    </h6>
+                                    <p>
+                                        يمكنك طلب قطع الغيار وستصلك أينما كنت داخل جمهورية مصر العربية.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-confirm.png">
+                                <div class="step-caption">
+                                    <h6>خيارات متعددة</h6>
+                                    <p>يمكنك التواصل مع فريق متخصص في قطع الغيار والعثور دائمًا على الإجابة الصحيحة
+                                        لأسئلتك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-delivery.png">
+                                <div class="step-caption">
+                                    <h6>تسهيلات سداد مختلفة</h6>
+                                    <p>يمكنك طلب عروض أسعار مختلفة للأجزاء الجديدة أو المستعملة.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-price.png">
+                                <div class="step-caption">
+                                    <h6>تحديد أولويات طلباتك
+
+                                    </h6>
+                                    <p>
+                                        يمكنك الحصول على أكثر من عرض أسعار للأجزاء المطلوبة واختيار السعر الأنسب لك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="step-content">
+                                <img src="imgs/steps-confirm.png">
+                                <div class="step-caption">
+                                    <h6>قريباً!</h6>
+                                    <p>
+
+                                        قريباً!
+                                        يمكنك التواصل مع فريق متخصص في قطع الغيار والعثور دائمًا على الإجابة الصحيحة
+                                        لأسئلتك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!--/////vendors holder -->
+
+
+
+    <!-- questions holder  -->
+    <section class="questions-holder async" id="qu">
+        <!-- start through departi  -->
+        <section class="through-departi">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 about-caption">
+                        <div class="departi-info">
+                            <h2 class="h1">أسئلة شائعة
+                            </h2>
+                            <p>
+                                ديبارتي هي منصة إلكترونية تمدك بالعديد من الخيارات المرتبطة بقطع غيار سيارتك، سواء جديدة
+                                أو
+                                مستعملة.
+                            </p>
+                            <p>
+                                كما أنها المنصة الوحيدة التي تعطيك عروض أسعار مختلفة قبل شراء أي قطعة غيار لتتمكن من
+                                الاختيار بين خيارات متعددة.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="imgs/about.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end through departi-->
+
+        <!-- questions accordion-->
+
+        <section class="questions">
+            <div class="container-fluid">
+                <div class="accordion-holder">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        متى سوف أتلقى طلبي؟
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    سوف تتلقى طلبك في خلال 24 ساعة من إتمام عملية الدفع ، ويمكنك معرفة حالة طلبك من خلال
+                                    الوصول إلى أمر الشراء ومتابعة حالتك. عند شحن طلبك سوف تصلك رسالة نصية برقم التتبع
+                                    وناقل
+                                    الطلب، يمكنك بها الاستعلام عن حالة شحنتك بواسطة موقع شركة الشحن.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        لماذا نحتاج رقم الشاسيه؟ </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    كل جزء من أي سيارة له رقم فريد خاص به ويختلف الرقم من سيارة لأخرى أو حتى من سنة
+                                    تصنيع
+                                    إلى سنة تصنيع أخرى لنفس السيارة وأحياناً يوجد أكثر من نسخة من نفس السيارة إذا كان
+                                    هناك
+                                    إصدار أول أو إصدار ثان في نفس سنة التصنيع ورقم الشاسيه هنا يمثل رقم تعريف السيارة،
+                                    حيث
+                                    تظهر جميع التفاصيل الداخلية للسيارة وأرقام أجزائها وذلك للتأكد من تجهيز الأجزاء بشكل
+                                    صحيح. يتم طلب رقم الشاسيه قبل تحضير الطلب للتأكد من مطابقة الجزء المطلوب مع الجزء
+                                    المرسل
+                                    إليك، ستجد رقم الشاسيه مسجل في رخصة سيارتك.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        قطع الغيار الجديدة والمستعملة
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="new">
+                                        <h6>قطع الغيار الجديدة</h6>
+                                        <p>متوفرة وفقًا لاحتياجات العميل، سواء كانت أصلية أو بديلة (تجارية) وبالتأكيد
+                                            ننصح
+                                            العميل دائمًا بشراء الأجزاء الأصلية ، خاصة الأجزاء الميكانيكية والكهربائية.
+                                        </p>
+                                    </div>
+                                    <div class="new">
+                                        <h6>قطع الغيار المستعملة</h6>
+                                        <p>
+                                            معظم الأجزاء المستخدمة مأخوذة من مركبات لم تعد صالحة للاستعمال ، وهناك نوع
+                                            من
+                                            الأجزاء المستخدمة يسمى الأجزاء المجددة ، والتي تم استخدامها بشكل أساسي ،
+                                            ولكن
+                                            أعيد تصنيعها لتستمر لفترة أطول عند استخدامها .
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFour">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                                        الأجزاء المستعملة أعلى سعراً من الأجزاء الجديدة؟ </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    قد يحدث هذا في بعض أنواع الأجزاء، مثل الأجزاء الخارجية للسيارة. عندما يكون الجزء
+                                    نظيفًا
+                                    ومطليًا وجاهزًا للتثبيت مباشرة، فمن المنطقي أن يكون سعره أغلى من الجزء الذي لا يزال
+                                    بحاجة إلى الطلاء.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse"
+                                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                        هل تقومون بالتوصيل الى الورشة؟ </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                data-parent="#accordion">
+                                <div class="card-body">
+                                    سيارتك تعطلت وتحتاج إلى تركها للورشة؟ لديك خياران: أن تسند مهمة شراء قطع الغيار إلى
+                                    صاحب
+                                    الورشة ولا تضمن أفضل سعر، أو تبدأ في البحث عن القطعة بنفسك وتضيع وقتك في العثور على
+                                    أفضل
+                                    سعر. لماذا كلاهما بينما يمكنك العثور على قطع غيار سيارتك بمجموعة متنوعة من الأسعار
+                                    من
+                                    خلال ديبارتي؟ كل ما عليك فعله هو تسليم سيارتك للورشة ومعرفة الأجزاء المطلوبة
+                                    وتحميلها
+                                    على تطبيقنا لتجد عدة أنواع وأسعار. ما عليك سوى تحديد اختيارك وسنقوم نحن بعملية
+                                    التسليم.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+
+    <!--////questions holder -->
+
+
+    <!-- contact holder-->
+
+
+
+    <section class="contact-holder async" id="cu">
+        <!-- start through departi  -->
+        <section class="through-departi" >
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 about-caption">
+                        <div class="departi-info">
+                            <h2 class="h1">يمكنك التواصل معنا بكل سهولة </h2>
+                            <p>
+                                يمكنك طرح اي سؤال او اي استفسار وسيتم الرد عليك في اسررع وقت ممكن
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="imgs/about.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end through departi-->
+
+        <!-- sign our company-->
+
+
+        <section class="sign-company" style="padding-top:0">
+            <div class="container-fluid">
+                <div class="account-info signup">
+                    <h5>
+                        <i class="far fa-address-book"></i> تواصل معنا
+                    </h5>
+                    <form>
+                        <div class="form-outline">
+                            <input type="text" id="form1" class="form-control" />
+                            <label class="form-label" for="form1">
+                                <i class="fas fa-user-alt"></i>الاسم
+                            </label>
+                        </div>
+                        <div class="form-outline">
+                            <input type="email" id="form1" class="form-control" />
+                            <label class="form-label" for="form1">
+                                <i class="fas fa-envelope-open-text"></i>البريد
+                            </label>
+                        </div>
+                        <div class="form-outline">
+                            <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                            <label class="form-label" for="textAreaExample">
+                                <i class="fas fa-envelope-open"></i>الرسالة
+                            </label>
+                        </div>
+                        <button class="btn btn-primary form-control" style="padding:0">تسجيل </button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <!--///end sign company-->
+    </section>
+
+
+    <!--//// contact  holder -->
+
+
+
+
+    <!-- start footer -->
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-links">
+                        <h6>عن ديبارتي</h6>
+                        <ul>
+                            <li>
+                                <a href="#"> ديبارتي للورش</a>
+                            </li>
+                            <li>
+                                <a href="#">من نحن؟</a>
+                            </li>
+                            <li>
+                                <a href="#">شركاؤنا</a>
+                            </li>
+                            <li>
+                                <a href="#">انضم إلينا</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-links">
+                        <h6>عن ديبارتي</h6>
+                        <ul>
+                            <li>
+                                <a href="#"> ديبارتي للورش</a>
+                            </li>
+                            <li>
+                                <a href="#">من نحن؟</a>
+                            </li>
+                            <li>
+                                <a href="#">شركاؤنا</a>
+                            </li>
+                            <li>
+                                <a href="#">انضم إلينا</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-links">
+                        <h6>عن ديبارتي</h6>
+                        <ul>
+                            <li>
+                                <a href="#"> ديبارتي للورش</a>
+                            </li>
+                            <li>
+                                <a href="#">من نحن؟</a>
+                            </li>
+                            <li>
+                                <a href="#">شركاؤنا</a>
+                            </li>
+                            <li>
+                                <a href="#">انضم إلينا</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="call-us">
+                        <div class="calling-info">
+                            <h6>اتصل بنا </h6>
+                            <p>القاهرة - جمهورية مصر العربية</p>
+                        </div>
+                        <div class="calling-info">
+                            <h6>ساعات العمل </h6>
+                            <p>09:00ص - 06:00م</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright d-flex justify-content-between">
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="copy">
+                    © 2020 ديبارتي، جميع الحقوق محفوظة
+                </div>
+
+                <div class="scroll-top">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--////////end footer -->
+
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mdb.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel();
-        });
-    </script>
+
 </body>
 
 </html>

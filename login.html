@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- chorom meta-->
+    <!-- chorom inspect meta-->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
     <title>Rest</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/mdb.rtl.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -22,7 +20,7 @@
     <header>
         <nav class="navbar nav-main-index navbar-expand-lg">
             <a class="navbar-brand" href="index.html">
-                <img src="imgs/logo.png" width="80px">
+                <img src="imgs/logo.png" width="140px" height="65px">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +59,6 @@
 
                 </ul>
                 <div class="log">
-                    <a class="login" href="login.html">تسجيل الدخول </a>
                     <span class="sep">\</span>
                     <a class="signup" href="signup.html"> انشاء حساب </a>
                 </div>
@@ -73,23 +70,18 @@
     <!-- My Account -->
 
     <section class="my-account">
-        
+
 
 
         <!-- account info-->
 
         <div class="account-info signup">
             <h5 style="margin-right: 40px;">
-                <i class="fas fa-user"></i> انشاء حساب
-            </h5 >
+                <i class="fas fa-user"></i> تسجيل الدخول
+            </h5>
             <form style="margin-right: 20px;">
-                <div class="form-outline" style="margin-top: 0px;">
-                    <input type="text" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">
-                        <i class="fas fa-user"></i>الاسم
-                    </label>
-                </div>
-                <div class="form-outline" style="margin-top: 16px;">
+
+                <div class="form-outline" style="margin-top: 0;">
                     <input type="email" id="form1" class="form-control" />
                     <label class="form-label" for="form1">
                         <i class="fas fa-envelope-open-text"></i>البريد
@@ -101,32 +93,52 @@
                         <i class="fas fa-key"></i>كلمة المرور
                     </label>
                 </div>
-                <div class="form-outline" style="margin-top: 16px;">
-                    <input type="password" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">
-                        <i class="fas fa-key"></i> تأكيد كلمة المرور 
-                    </label>
-                </div>
-                <div class="form-outline" style="margin-top: 16px;">
-                    <input type="text" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">
-                        <i class="fas fa-mobile-alt"></i> الموبايل 
-                    </label>
-                </div>
-                <div class="form-outline" style="margin-top: 16px;">
-                    <input type="text" id="form1" class="form-control" />
-                    <label class="form-label" for="form1">
-                        <i class="fas fa-thumbtack"></i> العنوان 
-                    </label>
-                </div>
+                <a data-toggle="modal" data-target="#exampleModalCenter" class="forget-pass" href="#">هل نسيت كلمة
+                    المرور ؟؟</a>
+
+
+
                 <!-- this is for test only to manage user to see all pages -->
-                <a href="index-user.html" class="btn btn-primary form-control mt-2 ">تسجيل </a>
+                <a href="index-user.html" class="btn btn-primary form-control mt-3">دخول </a>
             </form>
         </div>
     </section>
 
+    <!-- Forget pass modal -->
 
+    <!-- Modal -->
+    <div class="modal fade text-right reset-password " id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"> طلب استعادة كلمة السر </h5>
+                    <button type="button" class="close reset-colse" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <form>
+                    <div class="form-outline" style="margin-top: 0;">
+                        <input type="email" id="form1" class="form-control" />
+                        <label class="form-label" for="form1">
+                            <i class="fas fa-envelope-open-text"></i>البريد
+                        </label>
+                    </div>
 
+                    <div class="form-group">
+                        <button class="btn btn-primary form-control "> اعادة كلمة السر </button>
+
+                    </div>
+                   </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">اغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -137,14 +149,8 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/mdb.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel();
-        });
-    </script>
 </body>
 
 </html>

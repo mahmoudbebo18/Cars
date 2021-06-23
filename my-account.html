@@ -12,6 +12,8 @@
     <title>Rest</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+
     <link rel="stylesheet" href="css/mdb.rtl.min.css">
     
 
@@ -25,11 +27,10 @@
     <!-- Start Nav Bar -->
     <header>
         <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index-user.html">
                 <img src="imgs/logo.png" width="80px">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i style="color:#fff" class="fa fa-bars"></i>
             </button>
 
@@ -50,26 +51,25 @@
                         <a class="nav-link" href="my-garage.html">
                             <i class="fa fa-car ml-2"></i>سياراتي </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item show">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <i class="fa fa-user ml-2"></i>حسابي                  
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="my-account.html">
-                              <i class="fas fa-user"></i>بيانات الحساب
+                                <i class="fas fa-user"></i>بيانات الحساب
                             </a>
                             <a class="dropdown-item" href="address.html">
-                              <i class="fas fa-map-marker-alt"></i>
-                              العنوان
+                                <i class="fas fa-map-marker-alt"></i>
+                                العنوان
                             </a>
                             <a class="dropdown-item" href="payment.html">
-                              <i class="fas fa-money-bill-alt"></i>
-                              طرق الدفع
+                                <i class="fas fa-money-bill-alt"></i>
+                                طرق الدفع 
                             </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">
-                              <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+                                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج    
                             </a>
                           </div>
                     </li>
@@ -81,13 +81,13 @@
 
     <!-- My Account -->
 
-    <section class="my-account">
+    <section class="my-account request">
         <div class="my-order d-flex">
             <!-- Bread-->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                        <a href="index.html"> <i class="fas fa-home"></i>الرئيسية </a>
+                        <a href="index-user.html"> <i class="fas fa-home"></i>الرئيسية </a>
                     </li>
                     <li class="breadcrumb-item active" aria-current="page">حسابي</li>
                 </ol>
@@ -96,7 +96,7 @@
         </div>
 
 
-        <!-- account info-->
+       <!-- account info-->
 
         <div class="account-info">
             <h5>
@@ -117,10 +117,10 @@
                     <label> <i class="fas fa-envelope-open"></i> البريد </label>
                     <input class="form-control" type="text" value="محمود الخطيب ">
                 </div>
-                <button class="btn btn-primary ">حفظ</button>
+                <button class="btn btn-primary  form-control">حفظ</button>
             </form>
         </div>
-    </section>
+    </section> 
 
 
    
